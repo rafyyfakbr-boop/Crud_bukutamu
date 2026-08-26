@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -51,7 +54,7 @@
             </li>
 
             <li class="nav-item">
-    <a class="nav-link" href="buku-tamu.php">
+    <a class="nav-link" href="buku_tamu.php">
         <i class="fas fa-fw fa-book-open"></i>
         <span>Buku Tamu</span></a>
 </li>
