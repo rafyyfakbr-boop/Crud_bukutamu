@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
         // jika data berhasil di hapus maka akan muncul alert
         echo "<script>alert('Data Berhasil di hapus!')</script>";
         // redirect ke halaman buku-tamu.php
-        echo "<script>window.location.href='buku-tamu.php'</script>";
+        echo "<script>window.location.href='buku_tamu.php'</script>";
     } else {
         // jika gagal di hapus
         echo "<script>alert('Data Gagal di hapus!')</script>";
