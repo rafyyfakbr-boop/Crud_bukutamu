@@ -76,7 +76,7 @@ include_once('templates/header.php');
         <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label"></label>
             <div class="col-sm-8 d-flex justify-content-end">
-                <a type="button" class="btn btn-danger btn-icon-split" href="buku-tamu.php">
+                <a type="button" class="btn btn-danger btn-icon-split" href="buku_tamu.php">
                     <span class="icon text-white-50">
                         <i class="fas fa-chevron-left"></i>
                     </span>
