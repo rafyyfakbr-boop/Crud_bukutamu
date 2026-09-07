@@ -9,11 +9,11 @@ if (isset($_GET['id'])) {
         // jika data berhasil di hapus maka akan muncul alert
         echo "<script>alert('Data Berhasil di hapus!')</script>";
         // redirect ke halaman users.php
-        echo "<script>window.location.href='users.php'</script>";
+        echo "<script>window.location.href='user.php'</script>";
     } else {
         // jika gagal di hapus
         echo "<script>alert('Data Gagal di hapus!')</script>";
-        echo "<script>window.location.href='users.php'</script>";
+        echo "<script>window.location.href='user.php'</script>";
     }
 }
 ?>
