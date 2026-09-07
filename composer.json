@@ -1,0 +1,15 @@
+{
+    "name": "rogstrix/crud_bukutamu",
+    "autoload": {
+        "psr-4": {
+            "Rogstrix\\CrudBukutamu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fikri raff",
+            "email": "rafyyfakbr@gmail.com"
+        }
+    ],
+    "require": {}
+}
