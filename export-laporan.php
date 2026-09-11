@@ -37,6 +37,11 @@ while ($d = mysqli_fetch_array($data)) {
     $i++;
 }
 
+// set header supaya browser langsung download file (bukan buka tab kosong)
+header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+header('Content-Disposition: attachment;filename="Laporan Buku Tamu.xlsx"');
+header('Cache-Control: max-age=0');
+
 $writer = new Xlsx($spreadsheet);
 $writer->save('Laporan Buku Tamu.xlsx');
 echo "<script>window.location = 'Laporan Buku Tamu.xlsx'</script>";

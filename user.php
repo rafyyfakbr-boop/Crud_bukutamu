@@ -1,6 +1,11 @@
   <?php
 require_once('function.php');
 include_once('templates/header.php');
+
+global $koneksi; // baris ini cuma buat "menenangkan" linter VSCode
+// mengambil data barang dari tabel dengan kode terbesar
+$query = mysqli_query($koneksi, "SELECT max(id_user) as kodeTerbesar FROM users");
+
 // pengecekan user role bukan admin maka tidak boleh mengakses halaman
 if (($_SESSION['role']) != 'admin') {
     echo "<script>alert('anda tidak memiliki akses')</script>";
