@@ -1,6 +1,14 @@
   <?php
 require_once('function.php');
 include_once('templates/header.php');
+
+// pengecekan user role bukan operator maka tidak boleh mengakses halaman
+if (($_SESSION['role']) != 'operator') {
+    echo "<script>alert('anda tidak memiliki akses')</script>";
+    echo "<script>window.location.href='index.php'</script>";
+}
+
+global $koneksi;
 // pengecekan user role bukan operator maka tidak boleh mengakses halaman
 if (($_SESSION['role']) != 'operator') {
     echo "<script>alert('anda tidak memiliki akses')</script>";
@@ -114,42 +122,56 @@ if (($_SESSION['role']) != 'operator') {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="">
-                    <input type="hidden" name="id_tamu" id="id_tamu" value="<?= $kodeTamu ?>">
-                    <div class="form-group row">
-                        <label for="nama_tamu" class="col-sm-3 col-form-label">Nama Tamu</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nama_tamu" name="nama_tamu">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        <input type="hidden" name="id_tamu" id="id_tamu" value="<?= $kodeTamu ?>">
+                        <div class="form-group row">
+                            <label for="nama_tamu" class="col-sm-3 col-form-label">Nama Tamu</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="nama_tamu" name="nama_tamu">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" id="alamat" name="alamat"></textarea>
+
+                        <div class="form-group row">
+                            <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="alamat" name="alamat"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="no_hp" class="col-sm-3 col-form-label">No. Telepon</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="no_hp" name="no_hp">
+
+                        <div class="form-group row">
+                            <label for="no_hp" class="col-sm-3 col-form-label">No. Telepon</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="no_hp" name="no_hp">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="bertemu" class="col-sm-3 col-form-label">Bertemu dg. </label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="bertemu" name="bertemu">
+
+                        <div class="form-group row">
+                            <label for="bertemu" class="col-sm-3 col-form-label">Bertemu dg. </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="bertemu" name="bertemu">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="kepentingan" class="col-sm-3 col-form-label">Kepentingan</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="kepentingan" name="kepentingan">
+
+                        <div class="form-group row">
+                            <label for="kepentingan" class="col-sm-3 col-form-label">Kepentingan</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="kepentingan" name="kepentingan">
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                    </div>
+
+                        <div class="form-group row">
+                            <label for="gambar" class="col-sm-3 col-form-label">Unggah Foto</label>
+                            <div class="custom-file col-sm-8">
+                                <input type="file" class="custom-file-input" id="gambar" name="gambar">
+                                <label class="custom-file-label" for="gambar">Choose file</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                            <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
+                        </div>
+
                 </form>
             </div>
         </div>
