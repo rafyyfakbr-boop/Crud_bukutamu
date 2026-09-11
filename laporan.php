@@ -2,6 +2,8 @@
  require_once('function.php');
 include_once('templates/header.php');
 
+global $link;
+
 if (isset($_POST['tampilkan'])) {
     $p_awal = $_POST['p_awal'];
     $p_akhir = $_POST['p_akhir'];
