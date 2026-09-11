@@ -1,4 +1,5 @@
  <?php
+ require_once('function.php');
 include_once('templates/header.php');
 
 if (isset($_POST['tampilkan'])) {

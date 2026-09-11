@@ -11,5 +11,7 @@
             "email": "rafyyfakbr@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.9"
+    }
 }
