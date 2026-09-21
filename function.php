@@ -3,7 +3,8 @@
 require_once('koneksi.php');
 
 // membuat query ke / dari database
-function query($query) {
+function query($query)
+{
     global $koneksi;
     $result = mysqli_query($koneksi, $query);
     $rows = [];
@@ -71,7 +72,8 @@ function ubah_tamu($data)
     return mysqli_affected_rows($koneksi);
 }
 // function hapus data tamu
-function hapus_tamu($id) {
+function hapus_tamu($id)
+{
     global $koneksi;
 
     $query = "DELETE FROM buku_tamu WHERE id_tamu = '$id'";
@@ -81,7 +83,8 @@ function hapus_tamu($id) {
     return mysqli_affected_rows($koneksi);
 }
 // function tambah data user
-function tambah_user($data){
+function tambah_user($data)
+{
     global $koneksi;
 
     $kode           = htmlspecialchars($data["id_user"]);
@@ -117,7 +120,8 @@ function ubah_user($data)
     return mysqli_affected_rows($koneksi);
 }
 // function hapus data user
-function hapus_user($id) {
+function hapus_user($id)
+{
     global $koneksi;
 
     $query = "DELETE FROM users WHERE id_user = '$id'";
@@ -127,7 +131,8 @@ function hapus_user($id) {
     return mysqli_affected_rows($koneksi);
 }
 // function ganti password user
-function ganti_password($data) {
+function ganti_password($data)
+{
     global $koneksi;
 
     $kode           = htmlspecialchars($data["id_user"]);

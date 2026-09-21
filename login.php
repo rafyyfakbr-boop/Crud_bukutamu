@@ -14,15 +14,15 @@ if (isset($_POST['login'])) {
         $row = mysqli_fetch_assoc($result);
 
         if (password_verify($password, $row['password'])) {
-        // set session
-        $_SESSION['login'] = true;
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = $row['user_role'];
+            // set session
+            $_SESSION['login'] = true;
+            $_SESSION['username'] = $username;
+            $_SESSION['role'] = $row['user_role'];
 
-        // login berhasil
-        header("Location: index.php");
-        exit;
-    }
+            // login berhasil
+            header("Location: index.php");
+            exit;
+        }
     }
 
     $error = true;
@@ -57,14 +57,14 @@ if (isset($_POST['login'])) {
 <body class="bg-gradient-primary">
 
     <div class="container">
-          <?php
-    if (isset($error)) : ?>
-    <div class="alert alert-danger mt-3" role="alert">
-        Username atau password salah!
-    </div>
-    <?php
-    endif;
-    ?>
+        <?php
+        if (isset($error)) : ?>
+            <div class="alert alert-danger mt-3" role="alert">
+                Username atau password salah!
+            </div>
+        <?php
+        endif;
+        ?>
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -72,46 +72,46 @@ if (isset($_POST['login'])) {
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-    <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
                             <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
                                 <img src="assets/img/loginimg.jpg" alt="" style="max-width: 70%; height: auto;">
                             </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                    </div>
-                    <form method="post" action="" class="user">
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-user"
-                                id="username" name="username" placeholder="Username...">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control form-control-user"
-                                id="password" name="password" placeholder="Password..">
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox small">
-                                <input type="checkbox" class="custom-control-input" id="remember" name="remember">
-                                <label class="custom-control-label" for="customCheck">Remember
-                                    Me</label>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    </div>
+                                    <form method="post" action="" class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="username" name="username" placeholder="Username...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="password" name="password" placeholder="Password..">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="remember" name="remember">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
-                            Login
-                        </button>
-                    </form>
-                    <hr>
-                    <div class="text-center">
-                        <a class="small" href="forgot-password.html">Forgot Password?</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
             </div>
 
         </div>

@@ -16,4 +16,3 @@ if (isset($_GET['id'])) {
         echo "<script>window.location.href='user.php'</script>";
     }
 }
-?>

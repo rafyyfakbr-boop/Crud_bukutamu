@@ -37,7 +37,7 @@ if (($_SESSION['role']) != 'operator') {
             <div class="alert alert-danger" role="alert">
                 Data gagal diubah!
             </div>
-        <?php
+    <?php
         }
     }
     ?>
