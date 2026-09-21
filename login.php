@@ -75,9 +75,9 @@ if (isset($_POST['login'])) {
     <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
-            <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                <img src="assets/images/login-page.png" alt="">
-            </div>
+                            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+                                <img src="assets/img/loginimg.jpg" alt="" style="max-width: 70%; height: auto;">
+                            </div>
             <div class="col-lg-6">
                 <div class="p-5">
                     <div class="text-center">
