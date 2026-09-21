@@ -69,7 +69,7 @@
                             // penomoran auto-increment
                             $no = 1;
                             // Query untuk memanggil semua data dari tabel buku_tamu
-                            $buku_tamu = query("SELECT * FROM buku_tamu");
+                            $buku_tamu = query("SELECT * FROM buku_tamu ORDER BY tanggal DESC, id_tamu DESC");
                             foreach ($buku_tamu as $tamu) : ?>
                               <tr>
                                   <td><?= $no++; ?></td>
