@@ -129,19 +129,19 @@
                       <div class="form-group row">
                           <label for="username" class="col-sm-3 col-form-label">Username</label>
                           <div class="col-sm-8">
-                              <input type="text" class="form-control" id="username" name="username">
+                              <input type="text" class="form-control" id="username" name="username" required>
                           </div>
                       </div>
                       <div class="form-group row">
                           <label for="password" class="col-sm-3 col-form-label">Password</label>
                           <div class="col-sm-8">
-                              <input type="password" class="form-control" id="password" name="password">
+                              <input type="password" class="form-control" id="password" name="password" required>
                           </div>
                       </div>
                       <div class="form-group row">
                           <label for="user_role" class="col-sm-3 col-form-label">User Role</label>
                           <div class="col-sm-8">
-                              <select class="form-control" id="user_role" name="user_role">
+                              <select class="form-control" id="user_role" name="user_role" required>
                                   <option value="admin">Administrator</option>
                                   <option value="operator">Operator</option>
                               </select>
