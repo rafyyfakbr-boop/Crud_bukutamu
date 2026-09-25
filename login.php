@@ -94,9 +94,9 @@ if (isset($_POST['login'])) {
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="remember" name="remember">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
+                                                <!-- <input type="checkbox" class="custom-control-input" id="remember" name="remember"> -->
+                                                <!-- <label class="custom-control-label" for="customCheck">Remember -->
+                                                    <!-- Me</label> -->
                                             </div>
                                         </div>
                                         <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
